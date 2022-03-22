@@ -49,13 +49,13 @@ export default function Input() {
   };
   const reset = () => {
     /* STEP 5 */
-    <button onClick={() => setInputValue("")}></button>;
+    setInputValue("");
   };
 
   const style = {
     fontSize: "1.5em",
     marginBottom: "0.3em",
-    color: inputValue > 10 ? "royalblue" : "" /* STEP 2 */,
+    color: inputValue > 10 ? "crismon" : "royalblue" /* STEP 2 */,
   };
 
   const style2 = {
@@ -75,9 +75,7 @@ export default function Input() {
     <div className="widget-input container">
       <h2>Input</h2>
       <div id="output" style={style}>
-        {inputValue.map((val) => {
-          val.toUpperCase();
-        })}
+        {inputValue.toUpperCase()}
       </div>{" "}
       {/* STEP 3 */}
       <div>
